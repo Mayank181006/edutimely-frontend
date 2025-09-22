@@ -1,0 +1,153 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* Dark mode variant */
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Base UI */
+  --background: #ffffff;
+  --foreground: #0f172a;
+
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+
+  /* EduTIMELY theme colors */
+  --primary: #1A3D6B; /* Deep Blue */
+  --primary-foreground: #ffffff;
+
+  --secondary: #3E99D1; /* Sky Blue */
+  --secondary-foreground: #ffffff;
+
+  --accent: #A4D43F; /* Lime Green */
+  --accent-foreground: #1A3D6B;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  /* Borders & inputs */
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #3E99D1;
+
+  /* Charts (you can recolor later if needed) */
+  --chart-1: #1A3D6B;
+  --chart-2: #3E99D1;
+  --chart-3: #A4D43F;
+  --chart-4: #facc15;
+  --chart-5: #f97316;
+
+  /* Radius */
+  --radius: 0.625rem;
+
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1A3D6B;
+  --sidebar-primary: #3E99D1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #A4D43F;
+  --sidebar-accent-foreground: #1A3D6B;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #3E99D1;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
+
+  /* EduTIMELY dark mode theme */
+  --primary: #1A3D6B;
+  --primary-foreground: #ffffff;
+
+  --secondary: #3E99D1;
+  --secondary-foreground: #ffffff;
+
+  --accent: #A4D43F;
+  --accent-foreground: #1A3D6B;
+
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+
+  --destructive: #b91c1c;
+  --destructive-foreground: #ffffff;
+
+  --border: #334155;
+  --input: #334155;
+  --ring: #3E99D1;
+
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #3E99D1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #A4D43F;
+  --sidebar-accent-foreground: #1A3D6B;
+  --sidebar-border: #334155;
+  --sidebar-ring: #3E99D1;
+}
+
+/* Tailwind mapping to CSS variables */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
